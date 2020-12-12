@@ -130,6 +130,15 @@ namespace UnfairHangman
                 Console.WriteLine("Press 'Enter'...");
                 Console.ReadLine();
                 lives--;
+                bool flagg = true;
+                foreach (char c in realWord)
+                {
+                    if (!guesses.ContainsKey(c))
+                    {
+                        flagg = false; break;
+                    }
+                }
+                if (flagg) break;
             }
             Console.Clear();
             bool lost = realWord == null;
