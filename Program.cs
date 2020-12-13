@@ -131,13 +131,16 @@ namespace UnfairHangman
                 Console.ReadLine();
                 lives--;
                 bool flagg = true;
-                foreach (char c in realWord)
+                if (realWord != null)
                 {
-                    if (!guesses.ContainsKey(c))
+                    foreach (char c in realWord)
                     {
-                        flagg = false; break;
+                        if (!guesses.ContainsKey(c))
+                        {
+                            flagg = false; break;
+                        }
                     }
-                }
+                } else { flagg = false; }
                 if (flagg) break;
             }
             Console.Clear();
