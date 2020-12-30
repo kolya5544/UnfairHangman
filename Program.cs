@@ -23,7 +23,7 @@ namespace UnfairHangman
             int length = rng.Next(5, 12);
             for (int i = 0; i<wordlist.Length; i++)
             {
-                string w = wordlist[i];
+                string w = wordlist[i].Trim();
                 if (w.Length != length) continue;
                 fitting.Add(w);
             }
@@ -78,7 +78,7 @@ namespace UnfairHangman
                                 List<string> wordsAfterApplyingStuff = new List<string>();
                                 for (int i = 0; i < fitting.Count; i++)
                                 {
-                                    string wrd = fitting[i];
+                                    string wrd = fitting[i].Trim();
                                     bool flag = true;
                                     for (int b = 0; b < wrd.Length; b++)
                                     {
