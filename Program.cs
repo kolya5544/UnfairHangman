@@ -24,7 +24,7 @@ namespace UnfairHangman
             for (int i = 0; i<wordlist.Length; i++)
             {
                 string w = wordlist[i];
-                if (w.Length != (length + 1)) continue;
+                if (w.Length != length) continue;
                 fitting.Add(w);
             }
             Console.Clear();
