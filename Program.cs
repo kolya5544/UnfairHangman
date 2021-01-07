@@ -102,6 +102,7 @@ namespace UnfairHangman
                                     if (realWord.Contains(g))
                                     {
                                         Console.WriteLine("You got it right. Lucky one!");
+                                        lives++;
                                         guesses.Add(g, true);
                                         break;
                                     }
